@@ -11,3 +11,10 @@ input.innerText = "Type Here";
 body.appendChild(input);
 body.appendChild(button);
 
+button.addEventListener('click', text);
+
+function text(){
+    console.log("clicked")
+}
+
+// export {button}
