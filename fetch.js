@@ -42,4 +42,5 @@
 // that charactor, if the charactor is already in the 
 // array than you can not get tha charactor again.
 
-
+// let request = request.open("GET"," https://pokeapi.co/api/v2/pokemon/ditto", true );
+// request.send(data => console.log(data));
