@@ -19,9 +19,9 @@ imgDiv1.appendChild(img1);
 imgDiv2.appendChild(img2);
 
 imgContainer.style.display = "flex";
-imgContainer.style.height = "800px";
+imgContainer.style.height = "500px";
 imgContainer.style.width = "800px";
-imgContainer.style.justifyContent = "";
+imgContainer.style.justifyContent = "center";
 //player1 container
 imgDiv1.style.height = "400px";
 imgDiv1.style.width = "400px";
@@ -42,13 +42,13 @@ img2.setAttribute("width", "300");
 img2.style.display = "block";
 
 button1.setAttribute("id", "btn1");
-button1.innerHTML = "<h3>Get Data</h3>";
+button1.innerHTML = "<h3>Get Z-Fighter</h3>";
 input1.setAttribute("id", "input1");
 input1.innerText = "Type Here";
 input1.setAttribute("placeholder", "Z - Fighter");
 
 button2.setAttribute("id", "btn2");
-button2.innerHTML = "<h3>Random Data</h3>";
+button2.innerHTML = "<h3>Random Z-Fighter</h3>";
 input2.setAttribute("id", "input2");
 input2.innerText = "Type Here";
 
@@ -58,46 +58,26 @@ body.appendChild(button1);
 body.appendChild(input2);
 body.appendChild(button2);
 
-body.appendChild(label);
+
 label.innerText = "Who Will Win?";
 body.appendChild(imgContainer);
+body.appendChild(label);
 //--selecting input for getting api z-fight
 input1.innerText = "Goku";
 // if innerText matches z- fighter
 // "https://dragonball-api.com/api/characters"  : this gives an array of characters
 
-async function getData() {
-  try {
-    let response = await fetch(`https://dragonball-api.com/api/characters/${Math.floor(Math.random()*9+1)}`);
-    if (response.ok) {
-      let data = await response.json();
-      console.log(data.id, data.image);
-      //console.log(data.items[Math.floor(Math.random() * 10)]);
-      img1.src = data.image; //renders image
-      console.log(data.ki)
-      console.log(data.name);
-      input1.innerText = data.ki;
-      input1.setAttribute("placeholder", data.name);
-  
 
-      // const image = data.image;
-    //   if (
-    //     data.name.toLowerCase() === input1.innerText ||
-    //     data.name.toUpperCase() === input1.innerText ||
-    //     data.name === input1.innerText
-    //   ) {
-    //   }
 
-    } else {
-    //   throw new Error("could not find fighter");
-    }
-    
-  } catch (error) {
-    console.error(error);
-  }
-}
+//getData function was below here------------
 
-getData();
+//function moved to fetch.js
+
+//getData();
+//getDatafunciton was obove here-----------------
+
+
+
 //input logic to get api char--
 //---attatch button to get z-fight object button function trigger input info
 // button1.addEventListener('click',getData);
@@ -123,43 +103,25 @@ let val = document.getElementById('input1').value;
 }
 // imgGen()
 
-function imgGen2(){//Part two of game sequence 
-let val = document.getElementById('input2').value;
-   fetch(`https://dragonball-api.com/api/characters/${Math.floor(Math.random()*9+1)}`)
-    .then(response => response.json())
-    .then(data2 => {
-        
-         img2.src = data2.image;
-         input2.innerText = data2.ki;
-         input2.setAttribute("placeholder", data2.name);
-        for(let i = 0; i < 10; i++){
-            console.log(data2.items[i]);
-        }
-          
-          if(val === data2.name){
 
-            console.log(data2.name);   
-            console.log(data2.ki);
-            console.log(response);
-    }
 
-    } )
-}
+// imgGen2 funciton---below here-------
+
 // imgGen2()
-
+//imgGen2 funciton above here--------------
 
 // let item = request.open("GET", "https://dragonball-api.com/api/characters/1", true);
 // console.log(item)
 
-export { button1, button2 };
+//export { button1, button2 };
 // will use eventlisteners in other file after exporting and importing the buttons
-button1.addEventListener("click", getData); // this function will fetch an api. the function will be in another file
+ // this function will fetch an api. the function will be in another file
 
 // function text1() {
 //   console.log("clicked1");
 // }
 
-button2.addEventListener("click", imgGen2); // this function will fetch an api. the function will be in another file
+ // this function will fetch an api. the function will be in another file
 
 // function text2() {
 //   console.log("clicked2");
@@ -172,7 +134,9 @@ let in2 = document.getElementById('input2');
 if(input1.innerText > input2.innerText){
     alert(in1 + ' is more powerful than ' + in2)
 }
-// export {button}
+ export{
+    button1, button2, input1, input2, img1, img2, label 
+}
 
 
 

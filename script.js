@@ -1,16 +1,10 @@
 
 
+async function getImage(){
+    return new Promise((resolve, reject)=>{
 
-async function game(){
-
-    if(sayinfetchBaseKI1 > sayinfetchBaseKI2){
-        console.log("player 1 wins")
-    }
-    if(sayinfetchBaseKI2 > sayinfetchBaseKI1){
-        console.log("player 2 wins")
-    }
+    });
 }
-
 // const img = "";
 
 // async function getData(){
@@ -29,3 +23,4 @@ async function game(){
 //     }
 // }
 // getData()
+
