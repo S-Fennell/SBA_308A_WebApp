@@ -1,7 +1,5 @@
 import{body, imgContainer, imgDiv1, imgDiv2, img1, img2, button1, button2, input1, input2 } from "./body.js"
 
-
-
 imgContainer.style.display = "flex";
 imgContainer.style.height = "500px";
 imgContainer.style.width = "800px";

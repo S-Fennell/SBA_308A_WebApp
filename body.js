@@ -14,7 +14,7 @@ h2.textContent = 'Click "Get" Z-Fighter to get a Random Z-Fighter'
 const imgArray = ["url('image/headimg.png')", "url('image/im1.png')", "url('image/im2.png')", "url('image/im3.png')", "url('image/im4.png')", "url('image/im5.png')"]
 
 
-
+//--Changes images when page loads
         setTimeout(()=>{
         headDiv.style.backgroundImage = "url('image/headimg.png')"
     },1000);
@@ -29,7 +29,6 @@ const imgArray = ["url('image/headimg.png')", "url('image/im1.png')", "url('imag
     },10000);        setTimeout(()=>{
         headDiv.style.backgroundImage = "url('image/im4.png')"
     },15000); 
-
 
 // headDiv.style.backgroundImage = "url('image/im1.png')"
 let button1 = document.createElement("button");
@@ -59,26 +58,6 @@ body.appendChild(button2);
 label.innerText = "Who Will Win?";
 body.appendChild(imgContainer);
 body.appendChild(label);
-
-function imgGen(){
-let val = document.getElementById('input1').value;
-   fetch(`https://dragonball-api.com/api/characters/${Math.floor(Math.random()*9+1)}`)
-    .then(response => response.json())
-    .then(data => {
-        console.log("clicked1");
-        for(let i = 0; i < 10; i++){
-            console.log(data.id);
-        }
-          
-          if(val === data.name){
-
-            img1.src = data.image;
-            console.log(data.name);   
-            console.log(data.ki);
-            console.log(response);
-    }
-    } )
-}
 
 let in1 = document.getElementById('input1');
 let in2 = document.getElementById('input2');
