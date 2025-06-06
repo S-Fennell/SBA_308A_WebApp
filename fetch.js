@@ -1,5 +1,10 @@
  import {button1, button2, input1, input2, img1, img2, label } from "./body.js"
 
+
+// const char = fetch(`https://dragonball-api.com/api/characters/1`)
+// .then(response => response.json())
+// .then(data = response)  I should have made this global so I can access what I need that I couldn't access before because the fetch was made inside the function.
+
 async function getData() {
   try {
     let response = await fetch(`https://dragonball-api.com/api/characters/${Math.floor(Math.random()*9+1)}`);

@@ -8,7 +8,7 @@ headDiv.style.borderRadius = '15px'
 body.appendChild(headDiv);
 let h2 = document.createElement('h2');
 body.append(h2);
-h2.textContent = 'Click "Get" Z-Fighter to get a Random Z-Fighter'
+h2.textContent = 'Click "Get Z-Fighter" to get a Random Z-Fighter'
 
 
 const imgArray = ["url('image/headimg.png')", "url('image/im1.png')", "url('image/im2.png')", "url('image/im3.png')", "url('image/im4.png')", "url('image/im5.png')"]
