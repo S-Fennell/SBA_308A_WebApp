@@ -1,6 +1,4 @@
 body{
     background-color: rgb(255, 111, 0);
-}
-div{
-    
+    background-image: url("/image/im5.png"); /*dont know why not working */
 }
